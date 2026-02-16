@@ -1,0 +1,15 @@
+diff --git a/include/winrt/base.h b/include/winrt/base.h
+index 40460f8..f785012 100644
+--- a/include/winrt/base.h
++++ b/include/winrt/base.h
+@@ -84,6 +84,10 @@ namespace winrt::impl
+ #error C++/WinRT requires coroutine support, which is currently missing. Try enabling C++20 in your compiler.
+ #endif
+ 
++#ifdef GetCurrentTime
++#undef GetCurrentTime // Conflict in MinGW "winbase.h".
++#endif
++
+ #ifdef _DEBUG
+ 
+ #define WINRT_ASSERT _ASSERTE
