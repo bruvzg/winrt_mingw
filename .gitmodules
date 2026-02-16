@@ -1,0 +1,6 @@
+[submodule "windows-rs"]
+	path = windows-rs
+	url = https://github.com/microsoft/windows-rs
+[submodule "cppwinrt"]
+	path = cppwinrt
+	url = https://github.com/microsoft/cppwinrt
